@@ -1,13 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # # Test
+# # This document was originally created on a Jupyter notebook
 
 # ## Ex 1
 # ### Écrire une fonction qui prend un paramètre chaîne de caractère et qui renvoi cette chaine en majuscule, sans utiliser la fonction majus directement.
-
-# In[61]:
-
 
 import string
 
@@ -30,14 +25,12 @@ def makeUppercase( userInput ):
 print ('Enter a string value')
 userInput = input('User value: ')
 
-#call function
+#call the function
 makeUppercase( userInput )
 
 
 # ## Ex 2
 # ### Écrire une fonction qui prend un paramètre entier X, et qui renvoi une réponse booléenne pour dire si le chiffre est divisible par 3 ou pas, sans utiliser la fonction div ou mod ou les opérateurs de division et reste de la division.
-
-# In[104]:
 
 
 #this function checks whether an integer can be devised by 3
@@ -91,7 +84,6 @@ checkIfDiv3( userInput )
 # 
 # ### Ecrire la fonction chemin.
 
-# In[289]:
 
 
 refCase=(1,7)
@@ -111,7 +103,7 @@ def voisinsCase(Plateau,refCase):
         
     #check if the referene case is at an extrimity of a row 
     if hRef==0:
-        leftCase=[(vRef,HorizentalRef-1),True]
+        leftCase=[(vRef,hRef-1),True]
         rightCase=[(vRef,hRef+1),Plateau[vRef][hRef+1]]
         
     elif hRef==len(Plateau[0])-1:
@@ -138,7 +130,7 @@ def voisinsCase(Plateau,refCase):
 voisinsCase(Plateau,refCase)
 
 
-# In[287]:
+
 
 
 listCases=[(1,3),(0,2),(1,7)]
@@ -156,7 +148,6 @@ def voisinsCases(Plateau,listCases):
 voisinsCases(Plateau,listCases)
 
 
-# In[306]:
 
 
 #example
@@ -164,7 +155,7 @@ Plateau= [ [True , False , False , False, True , False , False , False ] ,
           [ False , True , True , False, True , False , False , False ] ]
 startCase=(1,3)
 
-#initialize the stopping value
+#initialize the recursive reference
 visited=[]
 
 #this function detects all of the possibly accessible cases for a given reference case
@@ -211,7 +202,7 @@ def accessibles(Plateau,startCase):
 accessibles(Plateau,startCase)
 
 
-# In[283]:
+
 
 
 startCase=(1,3)
